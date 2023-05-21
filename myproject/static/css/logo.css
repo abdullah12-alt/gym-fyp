@@ -1,0 +1,19 @@
+@media only screen and (max-width: 992px) {
+    .logo {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logo {
+        float: left;
+    }
+} .form-m {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #ebebeb;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #9b9b9b;
+    margin-bottom: 18px;
+}
