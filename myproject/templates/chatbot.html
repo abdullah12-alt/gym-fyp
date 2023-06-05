@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    /* CSS for the body and container */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* CSS styling for the chatbot button */
+    #chat-button {
+      background-color: #FF9800;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 50px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      outline: none;
+    }
+
+    /* CSS styling for the chatbot button on hover */
+    #chat-button:hover {
+      background-color: #FFB74D;
+    }
+
+    /* CSS styling for the chatbot button when focused */
+    #chat-button:focus {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  
+
+    <!-- HTML element for the chatbot button -->
+    <button id="chat-button">Chat with Assistant Chatbot</button>
+  </div>
+
+  <!-- Kommunicate chatbot integration code -->
+  <script type="text/javascript">
+    document.getElementById("chat-button").addEventListener("click", function() {
+      (function(d, m){
+        var kommunicateSettings = {
+          "appId": "3e3cb282f7ff768522d9038e6ca68193e",
+          "popupWidget": true,
+          "automaticChatOpenOnNavigation": true,
+          "chatWidgetSettings": {
+            "header": {
+              "backgroundColor": "#FF9800",
+              "textColor": "#ffffff"
+            },
+            "launcher": {
+              "backgroundColor": "#FF9800",
+              "textColor": "#ffffff"
+            },
+            "chatWindow": {
+              "title": "Assistant Chatbot",
+              "welcomeMessage": "Hello! How can I assist you today?"
+            }
+          }
+        };
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0];
+        h.appendChild(s);
+        window.kommunicate = m;
+        m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+    });
+  </script>
+</body>
+</html>

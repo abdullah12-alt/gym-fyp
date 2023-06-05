@@ -1,0 +1,19 @@
+<!-- chat.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="chat-window">
+        <ul id="chat-log"></ul>
+    </div>
+    <form id="user-input-form">
+        <input type="text" id="user-input" placeholder="Type your message">
+        <input type="submit" value="Send">
+    </form>
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>

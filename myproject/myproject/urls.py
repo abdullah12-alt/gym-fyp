@@ -21,10 +21,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
 from myproject import views
+from payment import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('logout/', RedirectView.as_view(url = '/admin/logout/')),
+    path('logout/', RedirectView.as_view(url = '/admin/logout/')),
     path('home/', views.home, name='home'),
+    path('payment/<int:amount>/', views.payment, name='payment'),
+    path('chatbot/',views.chatbot ,name='chatbot'),
     path('bmi/', views.bmi, name='bmi'),
     path('about/', views.about, name='about'),
     path('services/', views.services, name='services'),

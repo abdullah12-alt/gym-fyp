@@ -1,74 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'main.html' %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Fitness Arena</title>
-    <link rel="icon" type="images/x-icon" href="/static/img/icon/dumbbell (1).png" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/logo.css" type="text/css">
-</head>
+<div class="header-bar">
+    <h1>Register</h1>
+</div>
 
-<body>
-    <section class="register-section spad" style="    padding: 0px;
-    margin: 0px;
-     background: none !important;">
-        <div class="container" >
-            <div class="col-lg-8" style="max-width:100%">
-                <div class="register-text">
-                    <div class="section-title">
-                        <h2>Sign Up</h2>
-                        <p>The First 7 Day Trial Is Completely Free With The Teacher</p>
-                    </div>
-                    <form action=" " class="register-form" method="POST">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <label for="username">Username </label>
-                                <input type="text" id="username" name="username" placeholder="Create a username (only letters and numbers)" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="name">First Name </label>
-                                <input type="text" id="fname" name="fname"  placeholder="Enter your first name" required>
-                            </div>     
-                            <div class="col-lg-6">
-                                <label for="name">Last Name </label>
-                                <input type="text" id="lname" name="lname"  placeholder="Enter your last name" required>
-                            </div>
-                            
-                            <div class="col-lg-6">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                            </div>
-                           
-                            <div class="col-lg-6">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password " placeholder="Create a password " required>
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="password">Confirm Password</label>
-                                <input type="password" id="conpassword" name="conpassword " placeholder="Confirm password " required>
-                            </div>
-                            
-                        </div>
-                        <button type="submit" class="register-btn">Sign Up</button>
-                    </form>
-                </div>
-            </div>
-            
-            </div>
-        </div>
-    </div>
-</section>
-</body>
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
 
-</html>
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input style="margin-top:10px ;" class="button" type="submit" value="Register">
+    </form>
+    <p style="color: aliceblue;">Already have an account? <a href="{% url 'login' %}" style="color: rgb(231, 64, 64);">Login</a></p>
+</div>
+
+
+
+
+{% endblock content %}

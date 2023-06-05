@@ -1,0 +1,41 @@
+/* Chat container */
+.chat-container {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    padding: 10px;
+  }
+  
+  /* Chat message */
+  .chat-message {
+    margin-bottom: 10px;
+  }
+  
+  /* User message */
+  .user-message {
+    text-align: right;
+  }
+  
+  /* Bot message */
+  .bot-message {
+    text-align: left;
+  }
+  
+  /* Input area */
+  .input-area {
+    margin-top: 10px;
+  }
+  
+  /* Input field */
+  .input-field {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    margin-top: 5px;
+  }
+  
+  

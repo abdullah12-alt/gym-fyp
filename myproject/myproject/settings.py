@@ -11,8 +11,16 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import environ
+import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
+environ.Env.read_env()
+# # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -20,10 +28,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-pm@rmb8pwp)rq_5!zj6gnajgjinev*(r7e&kdo+*dqg)tjiq0*'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# False if not in os.environ because of casting above
+try:
+    DEBUG = env('DEBUG')
+    SECRET_KEY = env('SECRET_KEY')
+except Exception as e:
+    print(e)
+
+
+# Raises Django's ImproperlyConfigured
+# exception if SECRET_KEY not in os.environ
 
 ALLOWED_HOSTS = []
 
@@ -40,7 +55,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'authentication'
+    'authentication',
+    'chatbot',
+    'payment',
+    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
@@ -52,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ROOT_URLCONF = 'myproject.urls'
 
@@ -137,3 +157,6 @@ MEDIA_ROOT =BASE_DIR /"media"
 MEDIA_URL ="/media/"
 
 
+STRIPE_PUBLIC_KEY=env('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY=env("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET=env("STRIPE_WEBHOOK_SECRET")
