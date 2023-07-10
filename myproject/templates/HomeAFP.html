@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gutim Template">
+    <meta name="keywords" content="Gutim, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Fitness Arena</title>
+    <link rel="icon" type="images/x-icon" href="/static/img/icon/dumbbell (1).png" />
+    <!-- Google Font -->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fqastyle.css" type="text/css">
+    <!-- Css Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/logo.css" type="text/css">
+
+</head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/647c89c57c7b15544f3ee689/1h238fm8b';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo" style="text-align: center;">
+                <a href="{% url 'home' %}" style="padding:0px !important ">
+                    <img src="/static/img/icon/dumbbell (1).png" alt="" srcset="">
+                    <h2 style="    font-size: 20px;
+                   color: #ffffff;
+                   font-weight: 600;">Smart Fitness Arena</h2>
+                </a>
+
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="{% url 'contact'%}">Contacts</a></li>
+
+                    </ul>
+                </nav>
+                <a href="{% url 'chatbot' %}" class="primary-btn signup-btn">Assistent</a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section set-bg" data-setbg="/static/img/my-img/man.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-text">
+                        <span>FITNESS ELEMENTS</span>
+                        <h1>BMI CALCULATOR</h1>
+                        <p>Smart Fitness Arena comes packed with the user-friendly BMI Calculator<br /> shortcode which
+                            lets</p>
+                        <a href="{% url 'bmi' %}" class="primary-btn">Calculate BMI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Begin -->
+    <section class="about-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-pic">
+                        <img src="/static/img/my-img/abs-998836.jpg" alt="">
+                        <!-- <a href="https://youtu.be/MyA_uF64cWg" class="play-btn video-popup">
+                            <img src="img/play.png" alt="">
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>Story About Us</h2>
+                        <p class="first-para">Welcome to Smart Fitness Arena, where we believe that living a healthy and
+                            active lifestyle should be accessible and enjoyable for everyone.
+                        </p>
+                        <p class="second-para"> Our mission is to provide our users with a platform that promotes
+                            fitness and wellbeing, helping them achieve their fitness goals and lead a happier,
+                            healthier life.</p>
+                        <a href="{% url 'about' %}" class="primary-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="services-pic">
+                        <img src="/static/img/services/service-pic.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-items">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="services-item bg-gray">
+                                    <img src="/static/img/services/service-icon-1.png" alt="">
+                                    <h4>Strategies</h4>
+                                    <p>We're committed to helping our users achieve their fitness goals and live
+                                        healthier,fulfilling lives.</p>
+                                </div>
+                                <div class="services-item bg-gray pd-b">
+                                    <img src="/static/img/services/service-icon-3.png" alt="">
+                                    <h4>Diet Plans</h4>
+                                    <p>Try our delicious meal plans,designed by food experts to help you in achieve your
+                                        goal.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="services-item">
+                                    <img src="/static/img/services/service-icon-2.png" alt="">
+                                    <h4>Workouts</h4>
+                                    <p>Discover new workout routines and moves that will take your fitness game to the
+                                        next level.</p>
+                                </div>
+                                <div class="services-item pd-b">
+                                    <img src="/static/img/services/service-icon-4.png" alt="">
+                                    <h4>Weight Loss</h4>
+                                    <p> Even a modest weight loss of 5% to 10% of your total body weight is likely to
+                                        produce health benefits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+    <h1 class="faq-heading">FAQ'S</h1>
+    <section class="faq-container">
+        <div class="faq-one">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How often should I exercise?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>The frequency of exercise depends on various factors, including your fitness goals, current
+                    fitness level, and schedule. Generally, it is recommended to aim for at least 150 minutes of
+                    moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity aerobic exercise per
+                    week, along with strength training exercises two or more days a week. However, it's best to
+                    consult with a fitness professional to determine a suitable exercise frequency for your specific
+                    needs.</p>
+            </div>
+        </div>
+        <hr class="hr-line">
+
+        <div class="faq-two">
+
+            <!-- faq question -->
+            <h1 class="faq-page">What types of exercises are best for weight loss?</h1>
+
+            <!-- faq answer -->
+
+            <div class="faq-body">
+                <p>A combination of cardiovascular exercises (such as running, cycling, or swimming) and strength
+                    training exercises (such as weightlifting or bodyweight exercises) is often recommended for
+                    weight loss. Cardiovascular exercises help burn calories, while strength training helps build
+                    lean muscle mass, which can increase your metabolism. Additionally, incorporating high-intensity
+                    interval training (HIIT) or circuit training into your routine can be effective for weight loss.
+                </p>
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-three">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How long does it take to see results from exercise?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>The timeline for seeing results from exercise varies from person to person. Factors such as your
+                    starting point, consistency, intensity of workouts, and nutrition play a role. It's important to
+                    focus on long-term, sustainable progress rather than expecting immediate results. Generally,
+                    noticeable changes may occur after a few weeks of consistent exercise, but significant
+                    transformations may take several months or more.</p>
+
+            </div>
+        </div>
+
+        <hr class="hr-line">
+
+
+        <div class="faq-four">
+
+            <!-- faq question -->
+            <h1 class="faq-page">What should I eat before and after workouts?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Before a workout, it's beneficial to have a balanced meal or snack that includes carbohydrates for
+                    energy and protein for muscle repair and recovery. Examples include a banana with nut butter, a
+                    Greek yogurt with fruit, or a small chicken wrap. After a workout, it's important to replenish your
+                    body with protein and carbohydrates to aid in muscle recovery. Examples include a protein shake with
+                    fruit, grilled chicken with sweet potatoes, or a vegetable omelet with whole-grain toast.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-five">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How can I stay motivated to exercise regularly?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Staying motivated can be challenging, but there are several strategies you can try. Setting specific,
+                    realistic goals, finding an exercise routine you enjoy, varying your workouts to keep them
+                    interesting, tracking your progress, finding a workout buddy or joining a fitness community, and
+                    rewarding yourself for reaching milestones can help maintain motivation. It's also helpful to remind
+                    yourself of the benefits of exercise, such as improved mood, increased energy, and better overall
+                    health.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-six">
+
+            <!-- faq question -->
+            <h1 class="faq-page">Is it necessary to lift weights or can I just do cardio?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Both cardiovascular exercise and strength training are important for overall fitness and health.
+                    Cardiovascular exercise provides cardiovascular benefits, burns calories, and improves endurance.
+                    Strength training helps build lean muscle mass, improves bone density, and boosts metabolism. It's
+                    recommended to incorporate a combination of both cardio and strength training into your fitness
+                    routine for optimal results.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-seven">
+
+            <!-- faq question -->
+            <h1 class="faq-page" >Can I target specific areas for fat loss?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Spot reduction, or the idea of targeting specific areas for fat loss, is a myth. When you lose
+                    weight, your body determines where it burns fat based on factors like genetics and hormones. Regular
+                    exercise, along with a balanced diet, can help reduce overall body fat and improve muscle tone
+                    throughout your body. Incorporating strength training exercises can help shape and define specific
+                    muscle groups.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-eight">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How do I prevent or manage muscle soreness?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Muscle soreness, also known as delayed onset muscle soreness (DOMS), is common after intense or new
+                    workouts. To prevent muscle soreness, it's important to warm up properly before exercising,
+                    gradually increase intensity and duration, and incorporate stretching and cool-down exercises. If
+                    you do experience muscle soreness, resting, applying ice or heat, gentle stretching, and taking
+                    over-the-counter pain relievers can help alleviate discomfort. Proper hydration and nutrition also
+                    play a role in it.</p>
+
+            </div>
+        </div>
+</section>
+    <!-- Classes Section Begin -->
+    <section class="classes-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>UNLIMITED CLASSES</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row classes-slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="single-class-item set-bg" data-setbg="/static/img/my-img/yga.jpg">
+                        <div class="si-text">
+                            <h4>Yoga</h4>
+                            <span><i class="fa fa-user"></i> Saira</span>
+                        </div>
+                    </div>
+                    <div class="single-class-item set-bg" data-setbg="/static/img/my-img/bxn.jpg">
+                        <div class="si-text">
+                            <h4>Boxing</h4>
+                            <span><i class="fa fa-user"></i>Saif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-class-item set-bg" data-setbg="/static/img/my-img/treadmill.jpg">
+                        <div class="si-text">
+                            <h4>Running</h4>
+                            <span><i class="fa fa-user"></i>Atif</span>
+                        </div>
+                    </div>
+                    <div class="single-class-item set-bg" data-setbg="/static/img/classes/classes-5.jpg">
+                        <div class="si-text">
+                            <h4>Workouts</h4>
+                            <span><i class="fa fa-user"></i>Asif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-class-item set-bg" data-setbg="/static/img/classes/classes-3.jpg">
+                        <div class="si-text">
+                            <h4>Personal Training</h4>
+                            <span><i class="fa fa-user"></i>Noman</span>
+                        </div>
+                    </div>
+                    <div class="single-class-item set-bg" data-setbg="/static/img/classes/classes-6.jpg">
+                        <div class="si-text">
+                            <h4>Weight Loss</h4>
+                            <span><i class="fa fa-user"></i>Alina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-class-item set-bg" data-setbg="/static/img/classes/classes-7.jpg">
+                        <div class="si-text">
+                            <h4>Personal Training</h4>
+                            <span><i class="fa fa-user"></i>Aliya</span>
+                        </div>
+                    </div>
+                    <div class="single-class-item set-bg" data-setbg="/static/img/classes/classes-8.jpg">
+                        <div class="si-text">
+                            <h4>Weight Loss</h4>
+                            <span><i class="fa fa-user"></i>Muneeb</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Classes Section End -->
+
+    <!-- Trainer Section Begin -->
+    <section class="trainer-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>EXPERT TRAINERS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-trainer-item">
+                        <img src="/static/img/trainer/trainer-1.jpg" alt="">
+                        <div class="trainer-text">
+                            <h5>Patrick</h5>
+                            <span>Leader</span>
+                            <p>Our mission is to provide a platform that promotes fitness and helping users to achieve
+                                their fitness goals.</p>
+                            <div class="trainer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-trainer-item">
+                        <img src="/static/img/trainer/trainer-2.jpg" alt="">
+                        <div class="trainer-text">
+                            <h5>Gregory</h5>
+                            <span>Gym coach</span>
+                            <p>Our mission is to provide a platform that promotes fitness and helping users to achieve
+                                their fitness goals.</p>
+                            <div class="trainer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-trainer-item">
+                        <img src="/static/img/trainer/trainer-3.jpg" alt="">
+                        <div class="trainer-text">
+                            <h5> Wagner</h5>
+                            <span>Fitness Trainer</span>
+                            <p>Our mission is to provide a platform that promotes fitness and helping users to achieve
+                                their fitness goals.</p>
+                            <div class="trainer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trainer Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>success stories</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="testimonial-item">
+                            <p>Hey! this website help me alot to achieve my fitness goals.Trainers are so good and
+                                hardworking. </p>
+                            <div class="ti-pic">
+                                <img src="/static/img/testimonial/testimonial-1.jpg" alt="">
+                                <div class="quote">
+                                    <img src="/static/img/testimonial/quote-left.png" alt="">
+                                </div>
+                            </div>
+                            <div class="ti-author">
+                                <h4>Cortez</h4>
+                                <span>member</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p>I’m Kaevon Khoozani, and my weight is 100kg.Then i start training with smart fitness
+                                arena and within 2 months i lose 10kg.
+
+                            </p>
+                            <div class="ti-pic">
+                                <img src="/static/img/trainer/trainer-1.jpg" alt="">
+                                <div class="quote">
+                                    <img src="/static/img/testimonial/quote-left.png" alt="">
+                                </div>
+                            </div>
+                            <div class="ti-author">
+                                <h4>Kaevon Khoozani</h4>
+                                <span>member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner-section set-bg" data-setbg="/static/img/banner-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-text">
+                        <h2>Get training today</h2>
+                        <p>We're committed to helping our users achieve their fitness goals and live healthier, more
+                            fulfilling lives. We're excited to be a part of your fitness journey and look forward to
+                            helping you reach your full potential!</p>
+                            <a href="https://dashboard.tawk.to/login" class="primary-btn banner-btn">Trainer Login</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="/static/img/banner-person.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Membership Section Begin -->
+
+    <!-- Membership Section End -->
+
+
+
+    <!-- Latest Blog Section Begin -->
+    <section class="latest-blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Latest Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-item">
+                        <img src="/static/img/blog/blog-1.jpg" alt="">
+                        <div class="blog-widget">
+                            <div class="bw-date">February 17, 2023</div>
+                            <a href="#" class="tag">#Gym</a>
+                        </div>
+                        <h4><a href="#">10 States At Risk of Rural Hospital Closures</a></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-item">
+                        <img src="/static/img/blog/blog-2.jpg" alt="">
+                        <div class="blog-widget">
+                            <div class="bw-date">February 17, 2022</div>
+                            <a href="#" class="tag">#Sport</a>
+                        </div>
+                        <h4><a href="#">Diver who helped save Thai soccer team</a></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-item">
+                        <img src="/static/img/blog/blog-3.jpg" alt="">
+                        <div class="blog-widget">
+                            <div class="bw-date">April 12, 2023</div>
+                            <a href="#" class="tag">#Body</a>
+                        </div>
+                        <h4><a href="#">Man gets life in prison for stabbing</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Blog Section End -->
+
+    <!-- Footer Banner Section Begin -->
+    <section class="footer-banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-banner-item set-bg" data-setbg="/static/img/footer-banner/footer-banner-2.jpg">
+                        <span>New member</span>
+                        <h2>7 days for free</h2>
+                        <p>Complete the training sessions with us, surely you will be happy</p>
+                        <a href="#" class="primary-btn">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-banner-item set-bg" data-setbg="/static/img/my-img/tyre-flip.jpg">
+                        <span>contact us</span>
+                        <h2>042 786 786</h2>
+                        <p>If you trust us on your journey they dark sex does not disappoint you!</p>
+                        <a href="#" class="primary-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Banner Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Phone</span>
+                        <p>042 786 786 </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Address</span>
+                        <p>72 Kangnam, 45 Opal Point west marina 392</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Email</span>
+                        <p>contact@smartfitnessarena.com</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="subscribe-option set-bg" data-setbg="/static/img/footer-signup.jpg">
+                <div class="so-text">
+                    <h4>Subscribe To Our Mailing List</h4>
+                    <p>Sign up to receive the latest information </p>
+                </div>
+                <form action="#" class="subscribe-form">
+                    <input type="text" placeholder="Enter Your Mail">
+                    <button type="submit"><i class="fa fa-send"></i></button>
+                </form>
+            </div> -->
+            <div class="copyright-text">
+
+
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | Smart Fitness Arena
+                </p>
+                </p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+      <!--Start of Tawk.to Script-->
+
+    <!--End of Tawk.to Script-->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/fqa.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/mixitup.min.js"></script>
+    <script src="/static/js/jquery.slicknav.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

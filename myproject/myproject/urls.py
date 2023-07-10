@@ -23,9 +23,9 @@ from django.views.generic import RedirectView
 from myproject import views
 from payment import urls
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('logout/', RedirectView.as_view(url = '/admin/logout/')),
-    path('home/', views.home, name='home'),
+    # path('logout/', RedirectView.as_view(url = '/admin/logout/')),
     path('payment/<int:amount>/', views.payment, name='payment'),
     path('chatbot/',views.chatbot ,name='chatbot'),
     path('bmi/', views.bmi, name='bmi'),
@@ -34,9 +34,10 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('blogdetails/', views.blogdetails, name='blogdetails'),
     path('gallery/', views.gallery, name='gallery'),
+    path('member/', views.HomeAFP, name='member'),
     path('contact/', views.contact, name='contact'),
-     path('blog/', include('blog.URLS')),
-     path('', include('authentication.urls')),
+    path('blog/', include('blog.URLS')),
+    path('auth/', include('authentication.urls'),name='auth'),
    
 ]
 if settings.DEBUG:

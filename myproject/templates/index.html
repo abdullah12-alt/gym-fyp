@@ -15,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fqastyle.css" type="text/css">
     <!-- Css Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
@@ -58,7 +59,13 @@
 
                     </ul>
                 </nav>
-                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+                {% if user.is_authenticated %}
+                      <a href="{% url 'logout' %}" class="primary-btn signup-btn">Logout</a>
+                {% else %}
+                          <a href="{% url 'login' %}" class="primary-btn signup-btn">Login</a>
+                {% endif %}
+                          <a href="#" id="chat-button" class="primary-btn signup-btn">Assistant</a>
+
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
@@ -159,7 +166,153 @@
         </div>
     </section>
     <!-- Services Section End -->
+    <h1 class="faq-heading">FAQ'S</h1>
+    <section class="faq-container">
+        <div class="faq-one">
 
+            <!-- faq question -->
+            <h1 class="faq-page">How often should I exercise?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>The frequency of exercise depends on various factors, including your fitness goals, current
+                    fitness level, and schedule. Generally, it is recommended to aim for at least 150 minutes of
+                    moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity aerobic exercise per
+                    week, along with strength training exercises two or more days a week. However, it's best to
+                    consult with a fitness professional to determine a suitable exercise frequency for your specific
+                    needs.</p>
+            </div>
+        </div>
+        <hr class="hr-line">
+
+        <div class="faq-two">
+
+            <!-- faq question -->
+            <h1 class="faq-page">What types of exercises are best for weight loss?</h1>
+
+            <!-- faq answer -->
+
+            <div class="faq-body">
+                <p>A combination of cardiovascular exercises (such as running, cycling, or swimming) and strength
+                    training exercises (such as weightlifting or bodyweight exercises) is often recommended for
+                    weight loss. Cardiovascular exercises help burn calories, while strength training helps build
+                    lean muscle mass, which can increase your metabolism. Additionally, incorporating high-intensity
+                    interval training (HIIT) or circuit training into your routine can be effective for weight loss.
+                </p>
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-three">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How long does it take to see results from exercise?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>The timeline for seeing results from exercise varies from person to person. Factors such as your
+                    starting point, consistency, intensity of workouts, and nutrition play a role. It's important to
+                    focus on long-term, sustainable progress rather than expecting immediate results. Generally,
+                    noticeable changes may occur after a few weeks of consistent exercise, but significant
+                    transformations may take several months or more.</p>
+
+            </div>
+        </div>
+
+        <hr class="hr-line">
+
+
+        <div class="faq-four">
+
+            <!-- faq question -->
+            <h1 class="faq-page">What should I eat before and after workouts?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Before a workout, it's beneficial to have a balanced meal or snack that includes carbohydrates for
+                    energy and protein for muscle repair and recovery. Examples include a banana with nut butter, a
+                    Greek yogurt with fruit, or a small chicken wrap. After a workout, it's important to replenish your
+                    body with protein and carbohydrates to aid in muscle recovery. Examples include a protein shake with
+                    fruit, grilled chicken with sweet potatoes, or a vegetable omelet with whole-grain toast.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-five">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How can I stay motivated to exercise regularly?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Staying motivated can be challenging, but there are several strategies you can try. Setting specific,
+                    realistic goals, finding an exercise routine you enjoy, varying your workouts to keep them
+                    interesting, tracking your progress, finding a workout buddy or joining a fitness community, and
+                    rewarding yourself for reaching milestones can help maintain motivation. It's also helpful to remind
+                    yourself of the benefits of exercise, such as improved mood, increased energy, and better overall
+                    health.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-six">
+
+            <!-- faq question -->
+            <h1 class="faq-page">Is it necessary to lift weights or can I just do cardio?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Both cardiovascular exercise and strength training are important for overall fitness and health.
+                    Cardiovascular exercise provides cardiovascular benefits, burns calories, and improves endurance.
+                    Strength training helps build lean muscle mass, improves bone density, and boosts metabolism. It's
+                    recommended to incorporate a combination of both cardio and strength training into your fitness
+                    routine for optimal results.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-seven">
+
+            <!-- faq question -->
+            <h1 class="faq-page" >Can I target specific areas for fat loss?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Spot reduction, or the idea of targeting specific areas for fat loss, is a myth. When you lose
+                    weight, your body determines where it burns fat based on factors like genetics and hormones. Regular
+                    exercise, along with a balanced diet, can help reduce overall body fat and improve muscle tone
+                    throughout your body. Incorporating strength training exercises can help shape and define specific
+                    muscle groups.</p>
+
+            </div>
+        </div>
+        <hr class="hr-line">
+
+
+        <div class="faq-eight">
+
+            <!-- faq question -->
+            <h1 class="faq-page">How do I prevent or manage muscle soreness?</h1>
+
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Muscle soreness, also known as delayed onset muscle soreness (DOMS), is common after intense or new
+                    workouts. To prevent muscle soreness, it's important to warm up properly before exercising,
+                    gradually increase intensity and duration, and incorporate stretching and cool-down exercises. If
+                    you do experience muscle soreness, resting, applying ice or heat, gentle stretching, and taking
+                    over-the-counter pain relievers can help alleviate discomfort. Proper hydration and nutrition also
+                    play a role in it.</p>
+
+            </div>
+        </div>
+</section>
     <!-- Classes Section Begin -->
     <section class="classes-section spad">
         <div class="container">
@@ -359,7 +512,7 @@
                         <p>We're committed to helping our users achieve their fitness goals and live healthier, more
                             fulfilling lives. We're excited to be a part of your fitness journey and look forward to
                             helping you reach your full potential!</p>
-                        <a href="#" class="primary-btn banner-btn">Contact Now</a>
+                        <a href="https://dashboard.tawk.to/login" class="primary-btn banner-btn">Trainer Login</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -387,11 +540,11 @@
                             <h4>Basic</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$17<span>/01 mo</span></h2>
+                        <h2 class="mi-price">$17</h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
-                                <span>12 months</span>
+                                <span>3 months</span>
                             </li>
                             <li>
                                 <p>Personal trainer</p>
@@ -426,11 +579,11 @@
                             <h4>Standard</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$57<span>/01 mo</span></h2>
+                        <h2 class="mi-price">$57</h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
-                                <span>12 months</span>
+                                <span>6 months</span>
                             </li>
                             <li>
                                 <p>Personal trainer</p>
@@ -455,7 +608,7 @@
                             <h4>Premium</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$98<span>/01 mo</span></h2>
+                        <h2 class="mi-price">$98</h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
@@ -482,74 +635,7 @@
     </section>
     <!-- Membership Section End -->
 
-    <!-- Register Section Begin -->
-    <section class="register-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="register-text">
-                        <div class="section-title">
-                            <h2>Register Now</h2>
-                            <p>The First 7 Day Trial Is Completely Free With The Teacher</p>
-                        </div>
-                        <form action="#" class="register-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <label for="name">First Name</label>
-                                    <input type="text" id="name">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="email">Your email address</label>
-                                    <input type="text" id="email">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="mobile">Mobile No*</label>
-                                    <input type="text" id="mobile">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="bmi">Bmi*</label>
-                                    <input type="number" id="mobile">
-                                </div>
-                                <div class="col-lg-6">
-
-                                    <label for="cars" class="col-lg-6">Your Goal*</label>
-                                    <select id="cars" name="cars" class="col-lg-6 form-m"
-                                        style="max-width:100% !important ">
-                                        <option value="volvo">Weight Loss</option>
-                                        <option value="saab">Weight Gain</option>
-                                        <option value="fiat">Fitness</option>
-
-                                    </select>
-                                    <style>
-                                        .form-m {
-                                            width: 100%;
-                                            height: 46px;
-                                            border: 1px solid #ebebeb;
-                                            padding-left: 20px;
-                                            font-size: 14px;
-                                            color: #9b9b9b;
-                                            margin-bottom: 18px;
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                            <button type="submit" class="register-btn">Get Started</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="register-pic">
-                        <img src="/static/img/my-img/trainer.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Register Section End -->
+   
 
     <!-- Latest Blog Section Begin -->
     <section class="latest-blog-section spad">
@@ -632,6 +718,13 @@
                         <p>042 786 786 </p>
                     </div>
                 </div>
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Admin</span>
+                       <p><a href="http://127.0.0.1:8000/admin/">Login here</a> </p> 
+                    </div>
+                </div>
                 <div class="col-md-4">
                     <div class="contact-option">
                         <span>Address</span>
@@ -675,13 +768,51 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+  
+
     <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/fqa.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/jquery.magnific-popup.min.js"></script>
     <script src="/static/js/mixitup.min.js"></script>
     <script src="/static/js/jquery.slicknav.js"></script>
     <script src="/static/js/owl.carousel.min.js"></script>
     <script src="/static/js/main.js"></script>
+    <script type="text/javascript">
+        document.getElementById("chat-button").addEventListener("click", function() {
+          (function(d, m){
+            var kommunicateSettings = {
+              "appId": "3e3cb282f7ff768522d9038e6ca68193e",
+              "popupWidget": true,
+              "automaticChatOpenOnNavigation": true,
+              "chatWidgetSettings": {
+                "header": {
+                  "backgroundColor": "#FF9800",
+                  "textColor": "#ffffff"
+                },
+                "launcher": {
+                  "backgroundColor": "#FF9800",
+                  "textColor": "#ffffff"
+                },
+                "chatWindow": {
+                  "title": "Assistant Chatbot",
+                  "welcomeMessage": "Hello! How can I assist you today?"
+                }
+              }
+            };
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0];
+            h.appendChild(s);
+            window.kommunicate = m;
+            m._globals = kommunicateSettings;
+          })(document, window.kommunicate || {});
+        });
+      </script>
+    
+     
 </body>
 
 </html>

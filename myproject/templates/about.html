@@ -23,19 +23,6 @@
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
     <link rel="stylesheet" href="/static/css/logo.css" type="text/css">
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/647c89c57c7b15544f3ee689/1h238fm8b';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
 
 <body>
     <!-- Page Preloder -->
@@ -58,15 +45,19 @@
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul>
-                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li ><a href="{% url 'home' %}">Home</a></li>
+                        <li class="active"><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'services' %}">Services</a></li>
                         <li><a href="{% url 'blog' %}">Blog</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
                         <li><a href="{% url 'contact'%}">Contacts</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="primary-btn signup-btn">Logout</a>
+          {% else %}
+                    <a href="{% url 'login' %}" class="primary-btn signup-btn">Login</a>
+          {% endif %}
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
@@ -178,7 +169,7 @@
                     <div class="banner-text">
                         <h2>Get training today</h2>
                         <p>We're committed to helping our users achieve their fitness goals and live healthier, more fulfilling lives. We're excited to be a part of your fitness journey and look forward to helping you reach your full potential!</p>
-                        <a href="#" class="primary-btn banner-btn">Contact Now</a>
+                        <a href="https://dashboard.tawk.to/login" class="primary-btn banner-btn">Trainer Login</a>
                     </div>
                 </div>
                 <div class="col-lg-5">

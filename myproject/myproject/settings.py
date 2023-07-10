@@ -11,15 +11,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
+# import environ
 import os
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
+# env = environ.Env(
+#     # set casting, default value
+#     DEBUG=(bool, False)
+# )
 
-environ.Env.read_env()
+# environ.Env.read_env()
 # # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,12 +30,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # False if not in os.environ because of casting above
-try:
-    DEBUG = env('DEBUG')
-    SECRET_KEY = env('SECRET_KEY')
-except Exception as e:
-    print(e)
-
+# try:
+#     DEBUG = env('DEBUG')
+#     SECRET_KEY = env('SECRET_KEY')
+# except Exception as e:
+#     print(e)
+DEBUG=True
+SECRET_KEY= 'django-insecure-pm@rmb8pwp)rq_5!zj6gnajgjinev*(r7e&kdo+*dqg)tjiq0*'
 
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
@@ -63,6 +64,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -157,6 +159,13 @@ MEDIA_ROOT =BASE_DIR /"media"
 MEDIA_URL ="/media/"
 
 
-STRIPE_PUBLIC_KEY=env('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY=env("STRIPE_SECRET_KEY")
-STRIPE_WEBHOOK_SECRET=env("STRIPE_WEBHOOK_SECRET")
+# STRIPE_PUBLIC_KEY=env('STRIPE_PUBLIC_KEY')
+# STRIPE_SECRET_KEY=env("STRIPE_SECRET_KEY")
+# STRIPE_WEBHOOK_SECRET=env("STRIPE_WEBHOOK_SECRET")
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '#senders email-id'
+EMAIL_HOST_PASSWORD = '#password associated with above email-id'

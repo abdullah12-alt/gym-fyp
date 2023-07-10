@@ -4,20 +4,21 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from myproject import settings
-import stripe
-
+# import stripe
 
 def home(request):
       return render(request,"index.html")
+@login_required(login_url='login')
 def bmi(request):
       return render(request,"bmi.html")
-@login_required(login_url='login')
+
 def about(request):
       return render(request,"about.html")
 def services(request):
       return render(request,"services.html")
 def blog(request):
       return render(request,"blog.html")
+@login_required(login_url='login')
 def blogdetails(request):
       return render(request,"blogdetails.html")
 def gallery(request):
@@ -26,6 +27,9 @@ def contact(request):
       return render(request,"contact.html")
 def chatbot(request):
       return render(request,"chatbot.html")
+@login_required(login_url='login')
+def HomeAFP(request):
+      return render(request,"HomeAFP.html")
 
 
 

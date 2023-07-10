@@ -10,9 +10,16 @@
         {% csrf_token %}
         <label>{{form.username.label}}</label>
         {{form.username}}
-
+        <p style="color: white;">Must include special character*</p>
+        <label>Email</label>
+        <input type="text">
+        <label>Age</label>
+        <input type="text">
+        
+        
         <label>{{form.password1.label}}</label>
         {{form.password1}}
+        <p style="color: white;">Must include special character, Uppercase and numeric* </p>
 
         <label>{{form.password2.label}}</label>
         {{form.password2}}
