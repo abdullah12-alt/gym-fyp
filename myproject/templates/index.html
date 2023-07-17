@@ -778,39 +778,18 @@
     <script src="/static/js/jquery.slicknav.js"></script>
     <script src="/static/js/owl.carousel.min.js"></script>
     <script src="/static/js/main.js"></script>
+    # updated 
     <script type="text/javascript">
-        document.getElementById("chat-button").addEventListener("click", function() {
-          (function(d, m){
-            var kommunicateSettings = {
-              "appId": "3e3cb282f7ff768522d9038e6ca68193e",
-              "popupWidget": true,
-              "automaticChatOpenOnNavigation": true,
-              "chatWidgetSettings": {
-                "header": {
-                  "backgroundColor": "#FF9800",
-                  "textColor": "#ffffff"
-                },
-                "launcher": {
-                  "backgroundColor": "#FF9800",
-                  "textColor": "#ffffff"
-                },
-                "chatWindow": {
-                  "title": "Assistant Chatbot",
-                  "welcomeMessage": "Hello! How can I assist you today?"
-                }
-              }
-            };
-            var s = document.createElement("script");
-            s.type = "text/javascript";
-            s.async = true;
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"3230e70bcc132410f19a4a76d4179645","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
             s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-            var h = document.getElementsByTagName("head")[0];
-            h.appendChild(s);
-            window.kommunicate = m;
-            m._globals = kommunicateSettings;
-          })(document, window.kommunicate || {});
-        });
-      </script>
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
     
      
 </body>
